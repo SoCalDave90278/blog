@@ -10,6 +10,10 @@ Rails.application.configure do
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
+
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+  #Being used to try to deploy to Railway. 
+
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
